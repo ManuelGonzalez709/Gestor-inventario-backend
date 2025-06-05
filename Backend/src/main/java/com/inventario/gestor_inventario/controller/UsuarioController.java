@@ -44,7 +44,6 @@ public class UsuarioController {
     @GetMapping("/admin/listarUsuarios")
     //@PreAuthorize("hasRole('ADMIN')")
     public List<Usuario> ListarUsuarios() {
-
         return usuarioServiceImpl.ListarUsuarios();
     }
 
@@ -117,8 +116,6 @@ public class UsuarioController {
     public Integer listarUsuariosActivos() {
         return usuarioServiceImpl.listarUsuariosActivos();
     }
-    @GetMapping("/usuario/usuariosActivos")
-    public List<Usuario>listaTotal_usuarios(){return usuarioServiceImpl.ListarUsuariosActivos();}
 
 
 }

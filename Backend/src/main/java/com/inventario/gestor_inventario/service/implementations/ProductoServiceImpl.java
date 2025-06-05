@@ -31,7 +31,6 @@ public class ProductoServiceImpl implements ProductoService {
     }
 
 
-
     public Integer totalProductosContados() {
         return productoRepository.totalProductosContados();
     }
@@ -102,12 +101,5 @@ public class ProductoServiceImpl implements ProductoService {
     @Override
     public List<ProductoMesDTO> listarProductosMes(){
         return productoRepository.listarProductosMes();
-    }
-
-    /*
-    ojo se ha cambiado pero creo que esta mal
-     */
-    public List<Producto> listarProductos() {
-        return List.of();
     }
 }
