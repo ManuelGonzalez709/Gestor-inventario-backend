@@ -84,6 +84,6 @@ Este proyecto está bajo la licencia [MIT](LICENSE).
 
 ---
 
-**Hecho con ❤️ por SantanaDV y colaboradores.**
+**Hecho con ❤️ por Manuelgonzalez709**
 
 ```
