@@ -1,69 +1,89 @@
-# Gestor-inventario
-Desarrollar una aplicación multiplataforma (móvil y escritorio) para la gestión de inventario y tareas en un almacén. Se utilizará Spring Boot para el backend y Android para la aplicación móvil. Se requiere integración con Git para la colaboración.
+# Gestor de Inventario Backend
 
+![Java](https://img.shields.io/badge/language-Java-blue)
+![Spring Boot](https://img.shields.io/badge/framework-SpringBoot-green)
+![License](https://img.shields.io/github/license/SantanaDV/Gestor-inventario-backend)
+![Build](https://img.shields.io/github/workflow/status/SantanaDV/Gestor-inventario-backend/CI?label=build)
 
-## 2. Funcionalidades Principales
+---
 
-* Común (Móvil y Escritorio)
-    * Vista de almacén:
-        * Mostrar estanterías y productos almacenados mediante una interfaz visual donde se representen los estantes y la cantidad de productos en cada uno.
-        * Permitir a los empleados solicitar productos cuando necesiten reabastecimiento.
-        * Opción para añadir nuevos productos con datos como nombre, cantidad, ubicación y fecha de ingreso.
-        * Notificaciones de alerta cuando un producto está por debajo del umbral mínimo de stock.
-        * Base de datos centralizada que garantizará la sincronización de datos en tiempo real entre la aplicación móvil y la de escritorio.
+**Gestor de Inventario Backend** es el corazón de una solución multiplataforma para la gestión eficiente de inventario y tareas en almacenes, desarrollado en **Spring Boot**. Este backend soporta aplicaciones móviles (Android) y de escritorio, facilitando el control de stock, la administración de tareas y la colaboración en equipo a través de integración con Git.
 
-* Aplicación Móvil (Android)
-    * Lectura de datos mediante tecnologías avanzadas:
-        * QR y código de barras: Para leer información sobre productos y ubicaciones.
-    * Funciones principales relacionadas con QR y códigos de barras:
-        * Registrar nuevos productos escaneando etiquetas QR.
-        * Añadir o desactivar productos al escanear su código y modificar su estado en la base de datos.
-        * Escanear el QR de una estantería para obtener un listado de productos almacenados en ella junto con sus cantidades.
+## 🚀 Características
 
-* Aplicación de Escritorio
-    * Gestor de almacén:
-        * Administrar productos, ubicaciones y estanterías con una interfaz gráfica intuitiva.
-        * Ver alertas en tiempo real sobre productos con bajo stock.
-        * Control de entradas y salidas de productos con historial de movimientos.
-    * Gestor de tareas:
-        * Creación, edición y eliminación de tareas de forma sencilla.
-        * Asignación de tareas a empleados con seguimiento del responsable.
-        * Estados de tareas definidos: "Por hacer", "En proceso", "Finalizada".
-        * Historial de tareas para garantizar un registro detallado del trabajo realizado.
+- **Gestión de Inventario:** Control total de productos, entradas, salidas y movimientos.
+- **Administración de Tareas:** Asignación y seguimiento eficiente de tareas para el personal.
+- **Autenticación y Seguridad:** Sistema robusto de usuarios y roles, con protección JWT.
+- **API RESTful:** Endpoints claros y bien documentados para interactuar desde cualquier cliente.
+- **Notificaciones:** Soporte para alertar sobre movimientos críticos o tareas pendientes.
+- **Historial y Auditoría:** Registro detallado de cambios y operaciones.
+- **Integración con Git:** Facilita la colaboración y el versionado del proyecto.
+- **Soporte Multiplataforma:** Pensado para integrarse con apps Android y clientes de escritorio.
 
-## 3. Tecnologías a Utilizar
+## 📦 Estructura del Proyecto
 
-* Backend: Spring Boot
-* Base de Datos: PostgreSQL / MySQL
-* Aplicación Móvil: Android (Java/Kotlin)
-* Aplicación de Escritorio: Java Spring Boot / JavaScript / HTML / CSS…
-* Control de Versiones: Git (GitHub/GitLab/Bitbucket)
+```
+src/
+ └── main/
+     ├── java/
+     │    └── com/
+     │         └── santanadv/
+     │              └── gestorinventario/
+     └── resources/
+          ├── application.properties
+          └── static/
+```
 
+## ⚙️ Instalación y Ejecución
 
-## 4. División del Trabajo
-* Equipo Backend
-  * Diseño y creación de la base de datos.
-  * Desarrollo de API REST en Spring Boot.
-  * Implementación de la lógica de negocio para gestión de inventario y tareas.
-  * Integración con las aplicaciones móvil y escritorio.
+1. **Clona el repositorio**
+   ```bash
+   git clone https://github.com/SantanaDV/Gestor-inventario-backend.git
+   cd Gestor-inventario-backend
+   ```
 
-* Equipo Móvil
-    * Desarrollo de la aplicación en Android.
-    * Implementación de la lectura NFC, QR y código de barras.
-    * Conexión con la API REST para sincronización de datos.
+2. **Configura la base de datos**  
+   Edita `src/main/resources/application.properties` con los detalles de tu base de datos (MySQL recomendado).
 
-* Equipo Escritorio
-    * Desarrollo de la aplicación de escritorio.
-    * Creación del gestor de almacén y tareas.
-    * Implementación de la vista de alertas.
-    * Integración con la API REST para sincronización de datos.
+3. **Construye y ejecuta el proyecto**
+   ```bash
+   ./mvnw spring-boot:run
+   ```
+   El backend estará disponible en `http://localhost:8080`.
 
+## 🛠️ Tecnologías Utilizadas
 
+- **Java 17+**
+- **Spring Boot**
+- **Spring Data JPA**
+- **MySQL / PostgreSQL**
+- **JWT Security**
+- **Lombok**
+- **Swagger/OpenAPI** *(Documentación de la API)*
 
-## 6. Plazos y Entregables (ORIENTATIVOS)
-   - Semana 1: Definición de requisitos, diseño de BD y configuración del repositorio Git.
-   - Semana 2-3: Desarrollo del backend (API REST) y conexión inicial con BD.
-   - Semana 4-5: Implementación de la aplicación móvil (UI y funcionalidades básicas).
-   - Semana 6-7: Implementación de la aplicación de escritorio (UI y funcionalidades básicas).
-   - Semana 8-9: Integración de aplicaciones con el backend y pruebas.
-   - Semana 10: Ajustes finales y despliegue.
+## 📲 Integración con el Cliente
+
+Consulta la [documentación de la API](http://localhost:8080/swagger-ui/) para conocer los endpoints disponibles y cómo conectar clientes Android o de escritorio.
+
+## 🧑‍💻 Contribuciones
+
+¡Las contribuciones son bienvenidas!  
+1. Haz un fork del repositorio.
+2. Crea una rama (`git checkout -b feature/nueva-funcionalidad`).
+3. Realiza tus cambios y commitea (`git commit -am 'Agrega nueva funcionalidad'`).
+4. Haz push a tu rama (`git push origin feature/nueva-funcionalidad`).
+5. Abre un Pull Request.
+
+## 🐞 Reporte de Errores y Solicitudes
+
+Por favor, utiliza la sección de [Issues](https://github.com/SantanaDV/Gestor-inventario-backend/issues) para reportar bugs o solicitar nuevas características.
+
+## 📄 Licencia
+
+Este proyecto está bajo la licencia [MIT](LICENSE).
+
+---
+
+**Hecho con ❤️ por SantanaDV y colaboradores.**
+
+```
