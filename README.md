@@ -38,7 +38,7 @@ src/
 
 1. **Clona el repositorio**
    ```bash
-   git clone https://github.com/SantanaDV/Gestor-inventario-backend.git
+   git clone https://github.com/ManuelGonzalez709/Gestor-inventario-backend.git
    cd Gestor-inventario-backend
    ```
 
@@ -76,7 +76,7 @@ Consulta la [documentación de la API](http://localhost:8080/swagger-ui/) para c
 
 ## 🐞 Reporte de Errores y Solicitudes
 
-Por favor, utiliza la sección de [Issues](https://github.com/SantanaDV/Gestor-inventario-backend/issues) para reportar bugs o solicitar nuevas características.
+Por favor, utiliza la sección de [Issues](https://github.com/ManuelGonzalez709/Gestor-inventario-backend/issues) para reportar bugs o solicitar nuevas características.
 
 ## 📄 Licencia
 
